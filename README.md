@@ -1,50 +1,56 @@
 <img width="269" alt="image" src="https://github.com/user-attachments/assets/0662af3e-be7f-45c2-a465-a68d0761e297" />
 
 **Step 1: Sign in to AWS Console**
-
-    Go to the AWS Management Console: https://aws.amazon.com/console/
-    Navigate to EC2 by searching for “EC2” in the AWS search bar.
-
-**Step 2: Launch an EC2 Instance**
-
-    Click on "Instances" in the left menu.
-    Click "Launch Instances".
-    Provide a Name for your instance.
+Go to the AWS EC2 console, click "Launch Instance", and choose an Amazon Machine Image (AMI) like Ubuntu.
+Select an instance type (e.g., t2.micro), configure a key pair for SSH access, and set up security group rules.
+Click "Launch", wait for the instance to start, and the click on connect.
 **
-Step 3: Choose an Amazon Machine Image (AMI**)
+Step 2: Install Terraform on Ubuntu EC2 Instance**
+follow Terraform document for installation - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 
-    Select an Amazon Linux, Ubuntu, Windows, or any other preferred AMI.
-    For this tutorial, choose Ubuntu 22.04 LTS.
+**Step 3: Write Terraform Code to Create an EC2 Instance**
 
-**Step 4: Choose an Instance Type**
+    Create a working directory
 
-    Select the instance type based on your requirement.
-    For basic testing, choose t2.micro (eligible for free tier).
+mkdir terraform-ec2 && cd terraform-ec2
 
-**Step 5: Configure Key Pair**
+Create a Terraform configuration file (main.tf)
 
-    Under Key pair (login), click "Create new key pair" or select an existing key.
-    Download the .pem file and keep it safe (required for SSH access).
+nano main.tf
 
-**Step 6: Configure Network Settings**
+Add the following Terraform configuration:
 
-    Ensure the instance is in the correct VPC and Subnet.
-    In Security group settings, allow SSH (port 22) so you can connect via SSH.
-        Add a rule:
-            Type: SSH
-            Protocol: TCP
-            Port Range: 22
-            Source: Your IP (My IP) or 0.0.0.0/0 (for global access, not recommended).
+provider "aws" {
+  region = "us-east-1"  # Change to your preferred AWS region
+}
 
-**Step 7: Configure Storage**
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"  # Replace with your region’s Ubuntu AMI ID
+  instance_type = "t2.micro"
 
-    Default storage is 8GB (for Ubuntu). Adjust as needed.
+  tags = {
+    Name = "Terraform-EC2"
+  }
+}
 
-**Step 8: Launch the Instance**
+Initialize Terraform
 
-    Click Launch Instance.
-    Wait for the instance to be in the Running state.
+terraform init
 
-**Step 9: Connect to EC2**
+Validate the Terraform configuration
 
-    Select the instance and click "Connect".
+terraform validate
+
+Apply the Terraform plan to create the EC2 instance
+
+    terraform apply -auto-approve
+
+    Check the instance in AWS Console
+        Go to EC2 Dashboard → Instances
+        Look for an instance named Terraform-EC2
+
+Step 3: Destroy the EC2 Instance (Optional)
+
+If you want to remove the created instance:
+
+terraform destroy -auto-approve
