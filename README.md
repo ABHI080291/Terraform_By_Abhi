@@ -9,3 +9,5 @@ assign first-key to newly created instance
 
 3) create a security group.
 assign that group to instance.
+
+4) install nginx
