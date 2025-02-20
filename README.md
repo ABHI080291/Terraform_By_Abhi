@@ -1,12 +1,11 @@
 # Terraform-Practice
 Created this repo for Terraform-Practice. 
 
-#task we will perform
+**Task we will perform**
+1) create a ec2
 
-create a ec2
-
-#ssh.key -> first key
+2) create ssh.key -> first key
 assign first-key to newly created instance
 
-create a security group.
+3) create a security group.
 assign that group to instance.
