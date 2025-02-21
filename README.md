@@ -1,4 +1,5 @@
-<img width="269" alt="image" src="https://github.com/user-attachments/assets/0662af3e-be7f-45c2-a465-a68d0761e297" />
+<img width="667" alt="Terraform" src="https://github.com/user-attachments/assets/7571d980-a374-47ba-8568-d867be383dc8" />
+
 
 **Step 1: Sign in to AWS Console**
 Go to the AWS EC2 console, click "Launch Instance", and choose an Amazon Machine Image (AMI) like Ubuntu.
