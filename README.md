@@ -7,5 +7,6 @@ Click "Launch", wait for the instance to start, and the click on connect.
 
 <img width="667" alt="Terraform" src="https://github.com/user-attachments/assets/7571d980-a374-47ba-8568-d867be383dc8" />
 
-![image](https://github.com/user-attachments/assets/5f4e16e0-f3b9-41c9-a9a9-3ec237e2285c)
+![image](https://github.com/user-attachments/assets/6b02f123-ff59-42f6-b7ff-3f9863e1c2a8)
+
 
