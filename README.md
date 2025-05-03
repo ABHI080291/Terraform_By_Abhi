@@ -20,7 +20,7 @@ Infrastructure as Code (IaC) is an approach that manages and provisions IT infra
 
 HashiCorp Configuration Language (HCL)
 
-**How to install Terraform **
+**How to install Terraform**
 
 **Step 1: Sign in to AWS Console**
 Go to the AWS EC2 console, click "Launch Instance", and choose an Amazon Machine Image (AMI) like Ubuntu.
