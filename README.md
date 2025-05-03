@@ -1,3 +1,27 @@
+**What is IAC?**
+
+Infrastructure as Code (IaC) is an approach that manages and provisions IT infrastructure, like servers, networks, and storage, using code instead of manual processes.
+
+**What are the diffrenet types if IAC tools?**
+
+1) AWS CloudFormation.
+2) Azure Resource Manager (ARM).
+3) Google Cloud Deployment Manager.
+4) Terraform - created by HashiCorp.
+
+**Key Advantages of Terraform:**
+
+1) Multi-Cloud Support.
+2) State Management.
+3) Scalable Solution.
+4) Remote State Management.
+
+**Which programming language is used in terraform ?**
+
+HashiCorp Configuration Language (HCL)
+
+
+
 **Step 1: Sign in to AWS Console**
 Go to the AWS EC2 console, click "Launch Instance", and choose an Amazon Machine Image (AMI) like Ubuntu.
 Select an instance type (e.g., t2.micro), configure a key pair for SSH access, and set up security group rules.
