@@ -11,10 +11,10 @@ Infrastructure as Code (IaC) is an approach that manages and provisions IT infra
 
 **Key Advantages of Terraform:**
 
-1) Multi-Cloud Support.
-2) State Management.
-3) Scalable Solution.
-4) Remote State Management.
+1) Multi-Cloud Support
+2) State Management
+3) Scalable Solution
+4) Remote State Management
 
 **Which programming language is used in terraform ?**
 
